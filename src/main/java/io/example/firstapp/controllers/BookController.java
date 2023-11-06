@@ -20,4 +20,11 @@ public class BookController {
         model.addAttribute("books",bookService.findAll());
         return "books";
     }
+
+    @RequestMapping("/getFirstBook")
+    private String getFirstBooks(Model model){
+        System.out.println("sono in getFirstBooks");
+        model.addAttribute("firstBook",bookService.getFirstBook());
+        return "firstBook";
+    }
 }

@@ -1,0 +1,22 @@
+<html lang="en" xmlns:th=="http://www.thymeleaf.org">
+<head>
+  <title>Ciao</title>
+</head>
+<body>
+<div>
+  <h1>Autori</h1>
+  <table border="1px" style="border-color: gainsboro">
+    <tr>
+      <th>Author id</th>
+      <th>Author name</th>
+      <th>Author surname</th>
+    </tr>
+    <tr th:each="author : ${authors}">
+      <td th:text="${author.id}">1</td>
+      <td th:text="${author.firstName}">name</td>
+      <td th:text="${author.lastName}">surname</td>
+    </tr>
+  </table>
+</div>
+</body>
+</html>
